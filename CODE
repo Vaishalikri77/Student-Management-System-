@@ -1,0 +1,42 @@
+-- Create Database
+CREATE DATABASE student_db;
+
+-- Use Database
+USE student_db;
+
+-- Create Table
+CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT,
+    course VARCHAR(50)
+);
+
+-- Insert Sample Data
+INSERT INTO students (id, name, age, course) VALUES
+(1, 'Amit Kumar', 20, 'CSE'),
+(2, 'Priya Singh', 21, 'ECE'),
+(3, 'Rahul Sharma', 19, 'CSE'),
+(4, 'Sneha Kumari', 22, 'IT'),
+(5, 'Rohit Verma', 20, 'ME'),
+(6, 'Anjali Gupta', 21, 'CSE'),
+(7, 'Vikas Yadav', 23, 'EE'),
+(8, 'Neha Kumari', 20, 'IT'),
+(9, 'Saurabh Kumar', 22, 'CSE'),
+(10, 'Pooja Singh', 21, 'ECE');
+
+-- View Data
+SELECT * FROM students;
+
+-- Update Example
+UPDATE students
+SET course = 'CSE'
+WHERE id = 2;
+
+-- Delete Example
+DELETE FROM students
+WHERE id = 5;
+
+-- Search Example
+SELECT * FROM students
+WHERE name = 'Amit Kumar';
